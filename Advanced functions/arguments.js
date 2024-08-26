@@ -2,9 +2,7 @@
 
 // console.log(res);
 
-// function max(p1, p2, p3, p4) {
-
-// }
+// function max(p1, p2, p3, p4) {}
 
 // function max() {
 //   let max = arguments[0];
