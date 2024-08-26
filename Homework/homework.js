@@ -3,16 +3,7 @@
 // 5 baho - (85 - 100)
 // 4 baho - (70 - 85)
 // 3 baho – (60 - 70)
-
-// const students = [
-//   { name: "Quincy", percent: 96 },
-//   { name: "Jason", percent: 84 },
-//   { name: "Alexis", percent: 100 },
-//   { name: "Sam", percent: 65 },
-//   { name: "Katie", percent: 90 },
-//   { name: "Anna", percent: 75 },
-// ];
-
+sort;
 // Output
 
 // const students = [
@@ -27,6 +18,14 @@
 // Input: getNamesByGrade(students, 5)
 // Output: ['Quincy', 'Alexis', 'Katie']
 
+const students = [
+  { name: "Quincy", percent: 96 },
+  { name: "Jason", percent: 84 },
+  { name: "Alexis", percent: 100 },
+  { name: "Sam", percent: 65 },
+  { name: "Katie", percent: 90 },
+  { name: "Anna", percent: 75 },
+];
 // 2.  Massivdagi bir xil so’zlar sonini hosil qiluvchi obyekt yarating. (reduce)
 
 // Input: const animals = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
@@ -62,6 +61,17 @@
 // {name: 'Jeniffer', age: 65}
 // ];
 // Output: 54
+// let arr = [
+//   { name: "John", age: 13 },
+//   { name: "Mark", age: 56 },
+//   { name: "Rachel", age: 45 },
+//   { name: "Nate", age: 67 },
+//   { name: "Jeniffer", age: 65 },
+// ];
+
+// arr.sort((a, b) => a.age - b.age);
+
+// console.log(arr[arr.length - 1].age - arr[0].age);
 
 // 7.  N ta elementdan iborat massiv berilgan.
 // Massiv elementlari orasidan juftlarini va toqlarini o'z ichiga oladigan massivlar hosil qilinsin. (filter)
@@ -70,10 +80,57 @@
 
 // 9. Products massivini id, name, price, rating va discount bo'yicha sortlash; (sort)
 
+let products = [
+  {
+    id: 6,
+    name: "Smarthpone",
+    price: 12000,
+    rating: 4.5,
+    discount: 20,
+  },
+  {
+    id: 2,
+    name: "Acer",
+    price: 10000,
+    rating: 4.3,
+    discount: 10,
+  },
+  {
+    id: 1,
+    name: "Mac book",
+    price: 17000,
+    rating: 4.7,
+    discount: 40,
+  },
+  {
+    id: 4,
+    name: "HP",
+    price: 21000,
+    rating: 4.1,
+    discount: 30,
+  },
+  {
+    id: 5,
+    name: "Dell",
+    price: 35000,
+    rating: 4.9,
+    discount: 30,
+  },
+];
+
+// products.sort((a, b) => a.id - b.id);
+// products.sort((a, b) => a.name - b.name);
+// products.sort((a, b) => a.price - b.price);
+// products.sort((a, b) => a.rating - b.rating);
+// products.sort((a, b) => a.discount - b.discount);
+
+// console.log(products);
 // 10. Rating bo'yicha eng kuchli product topilsin. (sort)
-
+// products.sort((a, b) => b.rating - a.rating);
+// console.log(products[0].rating);
 // 11. Narxi eng past bo'lgan product topilsin. (sort)
-
+// products.sort((a, b) => b.price - a.price);
+// console.log(products[products.length - 1].rating);
 // 12. Barcha products narxlari yig'indisi topilsin. (reduce)
 
 // 13. Faqatgina products nomlaridangina iborat bo'lgan massiv qaytaring. (map)
