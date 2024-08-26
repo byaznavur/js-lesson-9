@@ -4,39 +4,39 @@
 // 4 baho - (70 - 85)
 // 3 baho – (60 - 70)
 
-const students = [
-  { name: "Quincy", percent: 96 },
-  { name: "Jason", percent: 84 },
-  { name: "Alexis", percent: 100 },
-  { name: "Sam", percent: 65 },
-  { name: "Katie", percent: 90 },
-  { name: "Anna", percent: 75 },
-];
+// const students = [
+//   { name: "Quincy", percent: 96 },
+//   { name: "Jason", percent: 84 },
+//   { name: "Alexis", percent: 100 },
+//   { name: "Sam", percent: 65 },
+//   { name: "Katie", percent: 90 },
+//   { name: "Anna", percent: 75 },
+// ];
 
-function getNamesByGrade(students, grade) {
-  let gradeStudent = students.map((student) => {
-    let gradeBall;
+// function getNamesByGrade(students, grade) {
+//   let gradeStudent = students.map((student) => {
+//     let gradeBall;
 
-    if (student.percent >= 85) {
-      gradeBall = 5;
-    } else if (student.percent >= 75 && student.percent <= 85) {
-      gradeBall = 4;
-    } else if (student.percent >= 65 && student.percent <= 70) {
-      gradeBall = 3;
-    } else {
-      gradeBall = null;
-    }
+//     if (student.percent >= 85) {
+//       gradeBall = 5;
+//     } else if (student.percent >= 75 && student.percent <= 85) {
+//       gradeBall = 4;
+//     } else if (student.percent >= 65 && student.percent <= 70) {
+//       gradeBall = 3;
+//     } else {
+//       gradeBall = null;
+//     }
 
-    return { ...student, grade: gradeBall };
-  });
+//     return { ...student, grade: gradeBall };
+//   });
 
-  let filterGrade = gradeStudent.filter((student) => student.grade === grade);
+//   let filterGrade = gradeStudent.filter((student) => student.grade === grade);
 
-  return filterGrade.map((student) => student.name);
-}
+//   return filterGrade.map((student) => student.name);
+// }
 
-let res = getNamesByGrade(students, 4);
-console.log(res);
+// let res = getNamesByGrade(students, 4);
+// console.log(res);
 
 // Output
 
@@ -51,7 +51,7 @@ console.log(res);
 
 // Input: getNamesByGrade(students, 5)
 // Output: ['Quincy', 'Alexis', 'Katie']
-// 2.  Massivdagi bir xil so’zlar sonini hosil qiluvchi obyekt yarating. (reduce)
+// !2.  Massivdagi bir xil so’zlar sonini hosil qiluvchi obyekt yarating. (reduce)
 
 // Input: const animals = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
 // Output: {
@@ -65,6 +65,14 @@ console.log(res);
 
 // Input: [1, 2, 3, 4, 5]
 // Output: [1, 4, 9, 16, 25]
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let res = arr.map((el) => {
+//   return el * el;
+// });
+
+// console.log(res);
 
 // 4.  Massivdagi musbat sonlar yig’indisini hisoblang. (filter va reduce)
 
@@ -212,6 +220,14 @@ let products = [
 // Satrdagi so'zlar uzunligidan iborat bo'lgan massiv qaytaring. (split, map)
 // Input: "Men Abdulaziz Programmerman"
 // Outpu: [3, 9, 13]
+// let str = "Men Abdulaziz Programmerman";
+// let splitStr = str.split(" ");
+
+// let res = splitStr.map((a) => {
+//   return a.length;
+// });
+
+// console.log(res);
 
 // 19. Satrni bo'sh joy bor yoki yo'qligini tekshiring. (split, some)
 // Input: "Men Abdulaziz Programmerman"
@@ -221,6 +237,15 @@ let products = [
 
 // Input: {a: 2, b: 5, c: 7}
 // Output: ['a2', 'b5', 'c7']
+// let obj = { a: 2, b: 5, c: 7 };
+
+// let objArr = Object.entries(obj);
+
+// let res = objArr.map((a) => {
+//   return a.join("");
+// });
+
+// console.log(res);
 
 // 21. Sonning raqamlari yig'indisini hisoblab beradigan digitSum() funksiya yozing. (rekursiv funksiya)
 
