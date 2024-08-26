@@ -3,7 +3,41 @@
 // 5 baho - (85 - 100)
 // 4 baho - (70 - 85)
 // 3 baho – (60 - 70)
-sort;
+
+const students = [
+  { name: "Quincy", percent: 96 },
+  { name: "Jason", percent: 84 },
+  { name: "Alexis", percent: 100 },
+  { name: "Sam", percent: 65 },
+  { name: "Katie", percent: 90 },
+  { name: "Anna", percent: 75 },
+];
+
+function getNamesByGrade(students, grade) {
+  let gradeStudent = students.map((student) => {
+    let gradeBall;
+
+    if (student.percent >= 85) {
+      gradeBall = 5;
+    } else if (student.percent >= 75 && student.percent <= 85) {
+      gradeBall = 4;
+    } else if (student.percent >= 65 && student.percent <= 70) {
+      gradeBall = 3;
+    } else {
+      gradeBall = null;
+    }
+
+    return { ...student, grade: gradeBall };
+  });
+
+  let filterGrade = gradeStudent.filter((student) => student.grade === grade);
+
+  return filterGrade.map((student) => student.name);
+}
+
+let res = getNamesByGrade(students, 4);
+console.log(res);
+
 // Output
 
 // const students = [
@@ -17,15 +51,6 @@ sort;
 
 // Input: getNamesByGrade(students, 5)
 // Output: ['Quincy', 'Alexis', 'Katie']
-
-const students = [
-  { name: "Quincy", percent: 96 },
-  { name: "Jason", percent: 84 },
-  { name: "Alexis", percent: 100 },
-  { name: "Sam", percent: 65 },
-  { name: "Katie", percent: 90 },
-  { name: "Anna", percent: 75 },
-];
 // 2.  Massivdagi bir xil so’zlar sonini hosil qiluvchi obyekt yarating. (reduce)
 
 // Input: const animals = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
