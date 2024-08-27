@@ -538,6 +538,90 @@ console.log(uniqueAnimals);
 // Pupils massividagi ojectlarga quyidagi propertylarni qo'shib yangi massiv qaytaring. (map)
 
 //! 23. grade propertyga protcent 90-100 o'rtasida bo'lsa 5, 80-90 o'rtasida bo'lsa 4, 70-80 o'rtasida bo'lsa 3 bahoni, qolgan holatlarda 2 bahoni o'zlashtiring.(map)
+// const pupils = [
+//   {
+//     name: "Elbek",
+//     protcent: 95,
+//   },
+//   {
+//     name: "Zafar",
+//     protcent: 78,
+//   },
+//   {
+//     name: "Aziz",
+//     protcent: 83,
+//   },
+//   {
+//     name: "Jasur",
+//     protcent: 88,
+//   },
+//   {
+//     name: "Bobur",
+//     protcent: 66,
+//   },
+//   {
+//     name: "Kamron",
+//     protcent: 75,
+//   },
+// ];
+
+// let gradeBall = pupils.map((el) => {
+//   if (el.protcent >= 90 && el.protcent <= 100) {
+//     el.grade = 5;
+//   } else if (el.protcent >= 80 && el.protcent <= 90) {
+//     el.grade = 4;
+//   } else if (el.protcent >= 70 && el.protcent <= 80) {
+//     el.grade = 3;
+//   } else if (el.protcent >= 60 && el.protcent <= 70) {
+//     el.grade = 2;
+//   }
+
+//   return el;
+// });
+
+// console.log(gradeBall);
+
+//! 24. isPassed propertyga protcent 70 dan o'tsa true, aks holda false qiymat o'zlashtirilsin. (map)
+// const pupils = [
+//   {
+//     name: "Elbek",
+//     protcent: 95,
+//   },
+//   {
+//     name: "Zafar",
+//     protcent: 78,
+//   },
+//   {
+//     name: "Aziz",
+//     protcent: 83,
+//   },
+//   {
+//     name: "Jasur",
+//     protcent: 88,
+//   },
+//   {
+//     name: "Bobur",
+//     protcent: 66,
+//   },
+//   {
+//     name: "Kamron",
+//     protcent: 75,
+//   },
+// ];
+
+// let isPassed = pupils.map((el) => {
+//   if (el.protcent > 70) {
+//     el.isPassed = true;
+//   } else {
+//     el.isPassed = false;
+//   }
+
+//   return el;
+// });
+
+// console.log(isPassed);
+//! 25. Necha kishi imtihondan o'tdi va necha kishi imtihonda o'ta olmadi shuni ham hisoblang. (reduce)
+
 const pupils = [
   {
     name: "Elbek",
@@ -565,33 +649,17 @@ const pupils = [
   },
 ];
 
-//! 24. isPassed propertyga protcent 70 dan o'tsa true, aks holda false qiymat o'zlashtirilsin. (map)
+let res = pupils.reduce(
+  (acc, el) => {
+    if (el.protcent >= 70) {
+      acc.succesStudent++;
+    } else {
+      acc.fellStudent++;
+    }
+    return acc;
+  },
 
-//! 25. Necha kishi imtihondan o'tdi va necha kishi imtihonda o'ta olmadi shuni ham hisoblang. (reduce)
+  { fellStudent: 0, succesStudent: 0 }
+);
 
-// const pupils = [
-//   {
-//     name: "Elbek",
-//     protcent: 95,
-//   },
-//   {
-//     name: "Zafar",
-//     protcent: 78,
-//   },
-//   {
-//     name: "Aziz",
-//     protcent: 83,
-//   },
-//   {
-//     name: "Jasur",
-//     protcent: 88,
-//   },
-//   {
-//     name: "Bobur",
-//     protcent: 66,
-//   },
-//   {
-//     name: "Kamron",
-//     protcent: 75,
-//   },
-// ];
+console.log(res);
