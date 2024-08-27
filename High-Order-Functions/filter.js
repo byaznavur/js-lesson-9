@@ -14,7 +14,7 @@ let numbers = [10, 5, 7, 105, 30];
 
 let oddNumbers = numbers.filter((el) => el % 2);
 
-// console.log(oddNumbers);
+console.log(oddNumbers);
 
 let evenNumbers = numbers.filter((el) => !(el % 2));
 
